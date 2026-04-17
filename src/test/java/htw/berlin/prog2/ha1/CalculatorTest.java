@@ -90,5 +90,34 @@ class CalculatorTest {
 
 
     //TODO hier weitere Tests erstellen
+    /**
+     * Teilaufgabe 1: Schreiben Sie einen neuen zusätzlichen Test,
+     * der eine bisher nicht getestete Funktionalität abdeckt,
+     * die bereits funktioniert und der daher direkt grün wird.
+     */
+    @Test
+    @DisplayName("should toggle sign correctly")
+
+    void testNegativeKey() {
+        Calculator calc = new Calculator();
+
+        calc.pressDigitKey(5);
+        calc.pressNegativeKey();
+
+        String expected = "-5";
+        String actual = calc.readScreen();
+
+        assertEquals(expected, actual);
+
+    }
+
+    /**
+     * Teilaufgabe 2: Schreiben Sie zwei weitere zusätzliche Tests,
+     * die zwei unterschiedliche Fehlerkategorien aufdecken
+     * (d.h. deren Fehlerursachen in unterschiedlichen Methoden liegen)
+     * und somit fehlschlagen.
+     */
+
 }
+
 
