@@ -111,12 +111,7 @@ class CalculatorTest {
 
     }
 
-    /**
-     * Teilaufgabe 2: Schreiben Sie zwei weitere zusätzliche Tests,
-     * die zwei unterschiedliche Fehlerkategorien aufdecken
-     * (d.h. deren Fehlerursachen in unterschiedlichen Methoden liegen)
-     * und somit fehlschlagen.
-     */
+
 
 }
 
