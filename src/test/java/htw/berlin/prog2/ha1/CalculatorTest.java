@@ -111,7 +111,50 @@ class CalculatorTest {
 
     }
 
+    /*@Test
+    @DisplayName("should display result after percentage calculation")
+    void testPercentage() {
+        Calculator calc = new Calculator();
 
+        calc.pressDigitKey(1);
+        calc.pressDigitKey(0);
+
+        calc.pressBinaryOperationKey("+");
+        calc.pressDigitKey(5);
+        calc.pressClearKey();
+        calc.pressDigitKey(7);
+
+
+
+
+        String expected = "0.5";
+        String actual = calc.readScreen();
+
+        assertEquals(expected, actual);
+
+    }*/
+    @Test
+    @DisplayName("should only clear screen on first press of clesr key")
+    void testClearKeyIntermediate() {
+        Calculator calc = new Calculator();
+        calc.pressDigitKey(1);
+        calc.pressDigitKey(0);
+
+        calc.pressBinaryOperationKey("+");
+        calc.pressDigitKey(5);
+        calc.pressClearKey();
+        calc.pressDigitKey(7);
+        calc.pressEqualsKey();
+
+
+
+        String expected = "17";
+        String actual = calc.readScreen();
+
+        assertEquals(expected, actual);
+
+
+    }
 
 }
 
